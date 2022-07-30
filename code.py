@@ -1,24 +1,24 @@
 import random
 
-user_action = input("Enter a choice (rock, paper, scissors): ")
+user = input("Enter a choice (rock, paper, scissors): ")
 possible_actions = ["rock", "paper", "scissors"]
-computer_action = random.choice(possible_actions)
-print(f"\nYou chose {user_action}, computer chose {computer_action}.\n")
+computer = random.choice(possible_actions)
+print(f"\nYou chose {user}, computer chose {computer}.\n")
 
-if user_action == computer_action:
-    print(f"Both players selected {user_action}. It's a tie!")
-elif user_action == "rock":
-    if computer_action == "scissors":
-        print("Rock smashes scissors! You win!")
-    else:
+if user == computer:
+    print(f"Both players selected {user}. It's a tie!")
+elif user == "rock":
+    if computer == "scissors":
         print("Paper covers rock! You lose.")
-elif user_action == "paper":
-    if computer_action == "rock":
-        print("Paper covers rock! You win!")
     else:
+        print("Rock smashes scissors! You win!")
+elif user == "paper":
+    if computer == "rock":
         print("Scissors cuts paper! You lose.")
-elif user_action == "scissors":
-    if computer_action == "paper":
-        print("Scissors cuts paper! You win!")
     else:
+        print("Paper covers rock! You win!")
+elif user == "scissors":
+    if computer == "paper":
         print("Rock smashes scissors! You lose.")
+    else:
+        print("Scissors cuts paper! You win!")
